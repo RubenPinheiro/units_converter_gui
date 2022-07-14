@@ -12,7 +12,7 @@ def action():
     if inches_pounds.get() == 'Inches':
         math = round(float(user_input.get()) * 2.54, 2)
     else:
-        math = round(float(user_input.get()) * 0.4535924,2)
+        math = round(float(user_input.get()) * 0.4535924, 2)
     result_label.config(text=f"{math}")
 
 
@@ -38,13 +38,10 @@ is_equal_label = Label(text="is equal to")
 is_equal_label.grid(column=2, row=2)
 result_label = Label(text=f"{result}")
 result_label.grid(column=3, row=2)
-result_unit_label = Label(text=f"{result_unit[0]}")
+result_unit_label = Label(text="Cm")
 result_unit_label.grid(column=4, row=2)
-
 
 calculate = Button(text="Calculate", command=action)
 calculate.grid(column=3, row=3)
-
-
 
 window.mainloop()
