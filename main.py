@@ -2,7 +2,6 @@ from tkinter import *
 from tkinter import ttk
 
 result = 0
-result_unit = ['Cm', 'Kg']
 window = Tk()
 window.title("US units to Real units converter")
 window.minsize(width=300, height=150)
@@ -12,18 +11,16 @@ window.config(padx=20, pady=20)
 def action():
     if inches_pounds.get() == 'Inches':
         math = round(float(user_input.get()) * 2.54, 2)
-        result_unit_label.config(text=f"{result_unit[0]}")
     else:
         math = round(float(user_input.get()) * 0.4535924,2)
-        result_unit_label.config(text=f"{result_unit[1]}")
     result_label.config(text=f"{math}")
 
 
 def update_label(event):
     if inches_pounds.get() == 'Inches':
-        result_unit_label.config(text=f"{result_unit[0]}")
+        result_unit_label.config(text="Cm")
     else:
-        result_unit_label.config(text=f"{result_unit[1]}")
+        result_unit_label.config(text="Kg")
 
 
 user_input = Entry()
